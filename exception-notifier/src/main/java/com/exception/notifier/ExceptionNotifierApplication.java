@@ -7,17 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExceptionNotifierApplication implements CommandLineRunner
+public class ExceptionNotifierApplication
 {
-	@Autowired
-	NotificationException notificationException;
-
 	public static void main(String[] args) {
 		SpringApplication.run(ExceptionNotifierApplication.class, args);
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-	notificationException.throwException();
 	}
 }
